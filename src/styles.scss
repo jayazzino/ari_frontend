@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0 !important;
+  background-color: rgb(255, 207, 215);
+}
+header {
+  font-family: "Sigmar", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background-color: #313b3f;
+  color: $yellowGold;
+  overflow: auto;
+  padding: 5px 20px 7px 15px;
+  position: relative;
+  .fat-arrow {
+    position: relative;
+    float: left;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    span {
+      font-size: 20px;
+      font-style: italic;
+    }
+    .caret {
+      font-size: 30px;
+      line-height: 22px;
+      display: inline-block;
+      font-weight: lighter;
+    }
+  }
+  a {
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+    color: $yellowGold;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: none;
+  }
+}
